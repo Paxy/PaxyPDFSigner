@@ -1,0 +1,2 @@
+cd /home/paxy/sh/
+java -jar pdfsign.jar "$1"
