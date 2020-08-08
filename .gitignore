@@ -1,3 +1,6 @@
 # Ignore mvn artifacts
 /target
 
+# Release
+/release
+

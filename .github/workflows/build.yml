@@ -21,9 +21,21 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
+    - name: Create release dir
+      run: mkdir release
+
+    - name: Add postaCA config
+      run: cp ./pkcs11-posta.cfg release/
+
+    - name: Add jar to release
+      run: cp target/PaxyPDFSigner-*.jar release/PaxyPDFSigner.jar
+
+    - name: zip release
+      run: zip -r release.zip release
+
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.1.3
       with:
-        name: PaxyPdfSigner.jar
-        path: target/PaxyPDFSigner-*.jar
+        name: PaxyPdfSigner.zip
+        path: release.zip
 
