@@ -39,8 +39,6 @@ jobs:
         name: PaxyPdfSigner.zip
         path: release.zip
 
-    - name: Checkout code
-      uses: actions/checkout@v2
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
