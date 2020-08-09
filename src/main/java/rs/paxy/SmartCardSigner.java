@@ -117,8 +117,12 @@ public class SmartCardSigner {
         if (args.length < 1)
             return;
         File input = new File(args[0]);
-        String path = input.getParent();
+        if (!input.exists()) throw new Exception(
+                "Invalid path to input file: "+args[0]);
+        String path = input.getAbsoluteFile().getParent();
         String name = input.getName();
+        if (!name.contains(".pdf")) throw new Exception(
+                "PaxyPDFSigner supports only PDF input files.");
         String signedFile = path + "/" + name.replace(".pdf", "-signed.pdf");
 
         new SmartCardSigner(input.getAbsolutePath(), signedFile, null);
