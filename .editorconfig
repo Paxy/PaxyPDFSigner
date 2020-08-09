@@ -1,0 +1,8 @@
+[*.{xml,yml}]
+indent_style = space
+indent_size = 2
+
+[*.java]
+indent_style = space
+indent_size = 4
+
