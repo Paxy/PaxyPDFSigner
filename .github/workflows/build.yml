@@ -28,7 +28,7 @@ jobs:
       run: cp ./pkcs11-posta.cfg release/
 
     - name: Add jar to release
-      run: cp target/PaxyPDFSigner-*.jar release/PaxyPDFSigner.jar
+      run: cp ./target/PaxyPDFSigner-*-jar-with-dependencies.jar release/PaxyPDFSigner.jar
 
     - name: zip release
       run: zip -r release.zip release
