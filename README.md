@@ -11,3 +11,5 @@ Usage:
 * Run signer with 
 java -jar PaxyPDFSigner.jar 'path to PDF file'
 
+Usage and Instalation video:
+https://youtu.be/DRfOvIL3M9I
