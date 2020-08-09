@@ -25,7 +25,7 @@ jobs:
       run: mkdir release
 
     - name: Add postaCA config
-      run: cp ./pkcs11-posta.cfg release/
+      run: cp ./pkcs11.cfg release/
 
     - name: Add jar to release
       run: cp ./target/PaxyPDFSigner-*-jar-with-dependencies.jar release/PaxyPDFSigner.jar
